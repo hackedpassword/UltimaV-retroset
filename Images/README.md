@@ -2,7 +2,7 @@
 
 The purpose of this is to slim down mods for gamers. Modders can peruse assets as seen below. No reason for a player d/l'ing packs of standalone images, etc, that are already packed into the mod.
 
-## Via [Unciv-Assets/Ultima V tileset](https://github.com/hackedpassword/Unciv-Assets/tree/main/Mods/Ultima%20V%20retroset):
+## Via [Unciv-Assets/Ultima V retroset](https://github.com/hackedpassword/Unciv-Assets/tree/main/Mods/Ultima%20V%20retroset):
 
 [/Images/TileSets/](https://github.com/hackedpassword/Unciv-Assets/tree/main/Mods/Ultima%20V%20retroset/Images/TileSets)
 
