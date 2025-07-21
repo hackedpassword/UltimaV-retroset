@@ -2,6 +2,8 @@
 
 Tileset graphics mod for Ultima V series.
 
+![](preview.png)
+
 Primary mod use is theming the Ultima V overworld map [Britannia](https://github.com/hackedpassword/Nextgen-Maps#britannia-overworld). Map generation isn't recommended due to map-modding specificity.
 
 ![](https://raw.githubusercontent.com/hackedpassword/Unciv-Assets/refs/heads/main/Images/Ultima%20V/Award%20winning%20screenshot.png)
@@ -17,6 +19,9 @@ Primary mod use is theming the Ultima V overworld map [Britannia](https://github
 - Feature sprites (like forests) are layered for Unciv gameplay, looking completely original at game start
 - Treasures hidden throughout the world, inclusive of expected reagents
 - Exploration "feel" *closely* retained in a world of adventure
+
+![](https://raw.githubusercontent.com/hackedpassword/Unciv-Assets/refs/heads/main/Images/Ultima%20V/adventure01.png)
+  
 - Custom [Shadowlord realm themed borders](https://github.com/hackedpassword/Ethereal-borders) look like wild energy barriers (probably the coolest Unciv edge mod to date!)
 - Towns, shrines, abbeys, moongates and dungeons
 - Road Improvements for paths
@@ -25,6 +30,8 @@ Primary mod use is theming the Ultima V overworld map [Britannia](https://github
 - Layered sprites partially conceal items to be discovered
 - Units re-themed
 - Intense attention to crafting the map as accurately as possible factoring both hex->square and quarter-scale design challenges
+
+![](https://raw.githubusercontent.com/hackedpassword/Unciv-Assets/main/Images/Ethereal%20borders/Screenie1.png)
 
 ## Not present, yet
 - More re-themed units
@@ -42,19 +49,7 @@ Primary mod use is theming the Ultima V overworld map [Britannia](https://github
 4. Make sure `Ultima tileset` and `Ethereal borders` are selected mods
 5. Add some civs and nations, I think 12 civs and 20 nations should provide plenty of unrushed exploration and foundation
 
-## What does it look like?
-
-With the new rivers and edges, these images need to be updated, but you get the idea at a glance.
-
-![](https://github.com/hackedpassword/Unciv-Assets/blob/main/Images/Ultima%20V/u5_next_phase.png)
-
-You see the new edge tiles improve square tile immersion. This needs more work but it'll do for now!
-
-![](https://github.com/hackedpassword/Unciv-Assets/blob/main/Images/Ultima%20V/u5_next_phase2.png)
-
-Rivers true to their graphical Ultima roots flow across the land.
-
-![](https://github.com/hackedpassword/Unciv-Assets/blob/main/Images/Ultima%20V/new_rivers.png)
+![](https://raw.githubusercontent.com/hackedpassword/Unciv-Assets/refs/heads/main/Images/Ultima%20V/adventure02.png)
 
 For a comparison, here's the original graphics:
 ![](https://github.com/hackedpassword/Unciv-Assets/blob/main/Images/Ultima%20V/original_map-at-cove.png)
