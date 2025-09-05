@@ -2,6 +2,16 @@
 
 Tileset graphics mod for Ultima V series.
 
+# Updates
+
+Finally solved how to accomplish paths!
+
+![](https://raw.githubusercontent.com/hackedpassword/Unciv-Assets/refs/heads/main/Images/Ultima%20V/new%20paths.png)
+
+![](https://raw.githubusercontent.com/hackedpassword/Unciv-Assets/refs/heads/main/Images/Ultima%20V/new%20paths2.png)
+
+## Pre-new path preview
+
 ![](preview.png)
 
 Primary mod use is theming the Ultima V overworld map [Britannia](https://github.com/hackedpassword/Nextgen-Maps#britannia-overworld). Map generation isn't recommended due to map-modding specificity.
