@@ -30,7 +30,7 @@
 	"Plains+Hill+Mine": ["Plains","Hill","Hill+Mine"],
 	"Desert+Hill+Mine": ["Desert","Hill","Hill+Mine"],
 
-	"Grassland+Hill+Fallout": ["Grassland","Hill","Fallout"],
+	"Grassland+Hill+Fallout": ["Grassland","Fallout","Hill"],
 	"Grassland+Hill+Mine+Fallout": ["Grassland","Hill","Mine","Fallout"],
 
 	// resources hide behind forest not awkwardly in front
