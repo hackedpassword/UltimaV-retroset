@@ -1,0 +1,124 @@
+[
+	{
+		"name": "Path",
+		"type": "TerrainFeature",
+//		"movementCost": 3,
+		"unbuildable": true,
+		"occursOn": ["Plains"],
+		"uniques": [
+		],
+	},
+	{
+		"name": "Path high",
+		"type": "TerrainFeature",
+		"unbuildable": true,
+		"occursOn": ["Plains"],
+		"uniques": [
+		],
+	},
+	{
+		"name": "Path high east",
+		"type": "TerrainFeature",
+		"unbuildable": true,
+		"occursOn": ["Plains"],
+		"uniques": [
+		],
+	},
+	{
+		"name": "Path high west",
+		"type": "TerrainFeature",
+		"unbuildable": true,
+		"occursOn": ["Plains"],
+		"uniques": [
+		],
+	},
+	{
+		"name": "Path low",
+		"type": "TerrainFeature",
+		"unbuildable": true,
+		"occursOn": ["Plains"],
+		"uniques": [
+		],
+	},
+	{
+		"name": "Path low east",
+		"type": "TerrainFeature",
+		"unbuildable": true,
+		"occursOn": ["Plains"],
+		"uniques": [
+		],
+	},
+	{
+		"name": "Path low west",
+		"type": "TerrainFeature",
+		"unbuildable": true,
+		"occursOn": ["Plains"],
+		"uniques": [
+		],
+	},
+	{
+		"name": "Path low north east",
+		"type": "TerrainFeature",
+		"unbuildable": true,
+		"occursOn": ["Plains"],
+		"uniques": [
+		],
+	},
+	{
+		"name": "Path low north west",
+		"type": "TerrainFeature",
+		"unbuildable": true,
+		"occursOn": ["Plains"],
+		"uniques": [
+		],
+	},
+	{
+		"name": "Path high south east",
+		"type": "TerrainFeature",
+		"unbuildable": true,
+		"occursOn": ["Plains"],
+		"uniques": [
+		],
+	},
+	{
+		"name": "Path high south west",
+		"type": "TerrainFeature",
+		"unbuildable": true,
+		"occursOn": ["Plains"],
+		"uniques": [
+		],
+	},
+	{
+		"name": "Path low west high east",
+		"type": "TerrainFeature",
+		"unbuildable": true,
+		"occursOn": ["Plains"],
+		"uniques": [
+		],
+	},
+	{
+		"name": "Path high west low east",
+		"type": "TerrainFeature",
+		"unbuildable": true,
+		"occursOn": ["Plains"],
+		"uniques": [
+		],
+	},
+	{
+		"name": "Path high west east",
+		"type": "TerrainFeature",
+		"unbuildable": true,
+		"occursOn": ["Plains"],
+		"uniques": [
+		],
+	},
+	{
+		"name": "Path low west east",
+		"type": "TerrainFeature",
+		"unbuildable": true,
+		"occursOn": ["Plains"],
+		"uniques": [
+		],
+	},
+
+]
