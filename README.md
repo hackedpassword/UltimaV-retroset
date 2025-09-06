@@ -10,6 +10,8 @@ Finally solved how to accomplish paths!
 
 ![](https://raw.githubusercontent.com/hackedpassword/Unciv-Assets/refs/heads/main/Images/Ultima%20V/new%20paths2.png)
 
+![](https://raw.githubusercontent.com/hackedpassword/Unciv-Assets/refs/heads/main/Images/Ultima%20V/new%20paths3.png)
+
 ## Pre-new path preview
 
 ![](preview.png)
