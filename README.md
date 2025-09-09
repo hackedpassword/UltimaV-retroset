@@ -4,7 +4,11 @@ Tileset graphics mod for Ultima V series.
 
 # Updates
 
-Finally solved how to accomplish paths!
+Finally solved how to accomplish paths! Latest preview with modified Road.png hits the mark:
+
+![](preview.png)
+
+## Pre-new road views:
 
 ![](https://raw.githubusercontent.com/hackedpassword/Unciv-Assets/refs/heads/main/Images/Ultima%20V/new%20paths.png)
 
