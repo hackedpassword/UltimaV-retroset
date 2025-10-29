@@ -106,8 +106,15 @@
 	"Grassland+Horses+Landmark": ["Grassland","Landmark+Cattle"],	// Hut - Iolo's
 	"Grassland+Horses+Manufactory": ["Grassland","Manufactory+Horses"],  // Hut cluster
 	"Grassland+Horses+Fort": ["Grassland","Manufactory+Horses"],	// Hut cluster - Cove, Paws
+	"Grassland+Horses+Pasture": ["Grassland","Barrel","Horses","Horses+Pasture"],
 
 	"Desert+Stone+Holy site": ["Desert","Holy site+Stone"],	// Sin'vrall Hut
+
+        "Grassland+Uranium+Mine": ["Grassland","Bookshelf","Uranium","Uranium+Mine"],
+        "Grassland+Hill+Uranium+Mine": ["Grassland","Hill","Bookshelf","Uranium","Uranium+Mine"],
+
+        "Grassland+Coal+Mine": ["Grassland","Shop","Coal","Coal+Mine"],
+        "Grassland+Hill+Coal+Mine": ["Grassland","Hill","Shop","Coal","Coal+Mine"],
 
 	// Cactus
 	"Desert+Wheat": ["Desert","Desert+Wheat"],	// Cactus (not sandlewood box)
