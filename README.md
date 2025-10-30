@@ -22,6 +22,8 @@ Finally solved how to accomplish paths! Latest preview with modified Road.png hi
 
 ## Pre-new path preview
 
+This preview shows paths with road sprites modified to blend away cleanly.
+
 ![](preview.png)
 
 Primary mod use is theming the Ultima V overworld map [Britannia](https://github.com/hackedpassword/Nextgen-Maps#britannia-overworld). Map generation isn't recommended due to map-modding specificity.
