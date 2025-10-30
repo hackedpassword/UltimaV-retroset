@@ -124,32 +124,16 @@
 	"Desert+Wheat+Manufactory": ["Desert","Manufactory","Desert+Wheat"],
 
 	// Forts
-	"Grassland+Fort": ["Grassland","Academy"],	// Using Academy/Keep as the sprite (for all forts)
-	"Plains+Fort": ["Plains","Academy"],
-	"Desert+Fort": ["Desert","Academy"],
-	"Grassland+Fort": ["Grassland","Academy"],
-	"Grassland+Forest+Fort": ["Grassland","Academy","ForestG"],
-	"Grassland+Jungle+Fort": ["Grassland","Academy","JungleG"],
-	"Grassland+Forest+Jungle+Fort": ["Grassland","Academy","JungleG"],
-	"Grassland+Hill+Fort": ["Grassland","Hill","Academy"],
-	"Grassland+Hill+Forest+Fort": ["Grassland","Hill","Academy","ForestG"],
-	"Grassland+Hill+Forest+Jungle+Fort": ["Grassland","Hill","Academy","JungleG"],
-
-	"Grassland+Hill+Coal+Fort": ["Grassland","Hill","Coal","Academy"],
-	"Grassland+Hill+Iron+Fort": ["Grassland","Hill","Iron","Academy"],
-	"Grassland+Hill+Horses+Fort": ["Grassland","Hill","Horses","Academy"],
-	"Grassland+Hill+Aluminum+Fort": ["Grassland","Hill","Aluminum","Academy"],
-
-	"Grassland+Cattle+Fort": ["Grassland","Academy","Cattle"],
-	"Grassland+Deer+Fort": ["Grassland","Academy","Deer"],
-	"Grassland+Hill+Sheep+Fort": ["Grassland","Hill","Academy","Sheep"],
-	"Grassland+Hill+Stone+Fort": ["Grassland","Hill","Academy","Stone"],
-	"Desert+Wheat+Fort": ["Desert","Academy","Desert+Wheat"],
-
-	"Grassland+Forest+Citrus+Fort": ["Grassland","Academy","Citrus","ForestG"],
-	"Grassland+Jungle+Citrus+Fort": ["Grassland","Academy","Citrus","JungleG"],
-	"Grassland+Forest+Jungle+Citrus+Fort": ["Grassland","Academy","Citrus","JungleG"],
-
+	"Grassland+Fort": ["Grassland","Fort"],
+	"Plains+Fort": ["Plains","Fort"],
+	"Desert+Fort": ["Desert","Fort"],
+	"Grassland+Fort": ["Grassland","Fort"],
+	"Grassland+Forest+Fort": ["Grassland","Fort","ForestG"],
+	"Grassland+Jungle+Fort": ["Grassland","Fort","JungleG"],
+	"Grassland+Forest+Jungle+Fort": ["Grassland","Fort","JungleG"],
+	"Grassland+Hill+Fort": ["Grassland","Hill","Fort"],
+	"Grassland+Hill+Forest+Fort": ["Grassland","Hill","Fort","ForestG"],
+	"Grassland+Hill+Forest+Jungle+Fort": ["Grassland","Hill","Fort","JungleG"],
 	// Citadels
 	"Grassland+Citadel": ["Grassland","Citadel"],  // Using Academy/Fortress as the sprite (for all Citadels)
 	"Plains+Citadel": ["Plains","Citadel"],
@@ -163,40 +147,40 @@
 	"Grassland+Hill+Forest+Jungle+Citadel": ["Grassland","Hill","Citadel","JungleG"],  // not sure this exists in the map
 
 	// Paths! ... shoot, watch for dupe path naming issues w/ terrainfeature/improvement (so far none)
-    // Base terrain is plains only atm. Supported improvements are fort and citadel.
-    // fyi this is indeed a small asset management pain for improvement matrixes
+	// Base terrain is plains only atm. Supported improvements are fort and citadel.
+	// fyi this is indeed a small asset management pain for improvement matrixes
 
-    "Plains+Path+Fort": ["Plains","Path","Academy"],
-    "Plains+Path low+Fort": ["Plains","Path low","Academy"],
-    "Plains+Path low west+Fort": ["Plains","Path low west","Academy"],
-    "Plains+Path low west high east+Fort": ["Plains","Path low west high east","Academy"],
-    "Plains+Path low west east+Fort": ["Plains","Path low west east","Academy"],
-    "Plains+Path low north west+Fort": ["Plains","Path low north west","Academy"],
-    "Plains+Path low north east+Fort": ["Plains","Path low north east","Academy"],
-    "Plains+Path low east+Fort": ["Plains","Path low east","Academy"],
-    "Plains+Path high+Fort": ["Plains","Path high","Academy"],
-    "Plains+Path high west+Fort": ["Plains","Path high west","Academy"],
-    "Plains+Path high west high east+Fort": ["Plains","Path high west high east","Academy"],
-    "Plains+Path high west east+Fort": ["Plains","Path high west east","Academy"],
-    "Plains+Path high north west+Fort": ["Plains","Path high north west","Academy"],
-    "Plains+Path high north east+Fort": ["Plains","Path high north east","Academy"],
-    "Plains+Path high east+Fort": ["Plains","Path high east","Academy"],
+	"Plains+Path+Fort": ["Plains","Path","Fort"],
+	"Plains+Path low+Fort": ["Plains","Path low","Fort"],
+	"Plains+Path low west+Fort": ["Plains","Path low west","Fort"],
+	"Plains+Path low west high east+Fort": ["Plains","Path low west high east","Fort"],
+	"Plains+Path low west east+Fort": ["Plains","Path low west east","Fort"],
+	"Plains+Path low north west+Fort": ["Plains","Path low north west","Fort"],
+	"Plains+Path low north east+Fort": ["Plains","Path low north east","Fort"],
+	"Plains+Path low east+Fort": ["Plains","Path low east","Fort"],
+	"Plains+Path high+Fort": ["Plains","Path high","Fort"],
+	"Plains+Path high west+Fort": ["Plains","Path high west","Fort"],
+	"Plains+Path high west high east+Fort": ["Plains","Path high west high east","Fort"],
+	"Plains+Path high west east+Fort": ["Plains","Path high west east","Fort"],
+	"Plains+Path high north west+Fort": ["Plains","Path high north west","Fort"],
+	"Plains+Path high north east+Fort": ["Plains","Path high north east","Fort"],
+	"Plains+Path high east+Fort": ["Plains","Path high east","Fort"],
 
-    "Plains+Path+Citadel": ["Plains","Path","Citadel"],
-    "Plains+Path low+Citadel": ["Plains","Path low","Citadel"],
-    "Plains+Path low west+Citadel": ["Plains","Path low west","Citadel"],
-    "Plains+Path low west high east+Citadel": ["Plains","Path low west high east","Citadel"],
-    "Plains+Path low west east+Citadel": ["Plains","Path low west east","Citadel"],
-    "Plains+Path low north west+Citadel": ["Plains","Path low north west","Citadel"],
-    "Plains+Path low north east+Citadel": ["Plains","Path low north east","Citadel"],
-    "Plains+Path low east+Citadel": ["Plains","Path low east","Citadel"],
-    "Plains+Path high+Citadel": ["Plains","Path high","Citadel"],
-    "Plains+Path high west+Citadel": ["Plains","Path high west","Citadel"],
-    "Plains+Path high west high east+Citadel": ["Plains","Path high west high east","Citadel"],
-    "Plains+Path high west east+Citadel": ["Plains","Path high west east","Citadel"],
-    "Plains+Path high north west+Citadel": ["Plains","Path high north west","Citadel"],
-    "Plains+Path high north east+Citadel": ["Plains","Path high north east","Citadel"],
-    "Plains+Path high east+Citadel": ["Plains","Path high east","Citadel"],
+	"Plains+Path+Citadel": ["Plains","Path","Citadel"],
+	"Plains+Path low+Citadel": ["Plains","Path low","Citadel"],
+	"Plains+Path low west+Citadel": ["Plains","Path low west","Citadel"],
+	"Plains+Path low west high east+Citadel": ["Plains","Path low west high east","Citadel"],
+	"Plains+Path low west east+Citadel": ["Plains","Path low west east","Citadel"],
+	"Plains+Path low north west+Citadel": ["Plains","Path low north west","Citadel"],
+	"Plains+Path low north east+Citadel": ["Plains","Path low north east","Citadel"],
+	"Plains+Path low east+Citadel": ["Plains","Path low east","Citadel"],
+	"Plains+Path high+Citadel": ["Plains","Path high","Citadel"],
+	"Plains+Path high west+Citadel": ["Plains","Path high west","Citadel"],
+	"Plains+Path high west high east+Citadel": ["Plains","Path high west high east","Citadel"],
+	"Plains+Path high west east+Citadel": ["Plains","Path high west east","Citadel"],
+	"Plains+Path high north west+Citadel": ["Plains","Path high north west","Citadel"],
+	"Plains+Path high north east+Citadel": ["Plains","Path high north east","Citadel"],
+	"Plains+Path high east+Citadel": ["Plains","Path high east","Citadel"],
 
 	// Improvements on bridges
 	"Desert+Flood plains": ["Desert+Flood plains","Flood plains"], // Horizontal bridge
