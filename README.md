@@ -1,8 +1,12 @@
 # UltimaV retroset
 
-Tileset graphics mod for Ultima V series.
+Tileset graphics mod for Ultima V series. A unicorn of Unciv graphics - square tile gameplay based on the OG RPG, Ultima V.
+
+Not _entirely_ complete yet - things like pillaged improvements and nuance tile conditions still fall back on built-in tilesets. Current progress is more than satisfactory to minimize distraction by non-Ultima sprites.
 
 # Updates
+
+Updated the installation section below, now accurate and easy to follow! 👍
 
 Finally solved how to accomplish paths! Latest preview with modified Road.png hits the mark:
 
@@ -26,12 +30,12 @@ Primary mod use is theming the Ultima V overworld map [Britannia](https://github
 
 ## Features
 
-- **Square tile** graphics (concealing the underlying hex grid)
+- **Square tile** graphics as mentioned (concealing the underlying hex grid)
 - Movement remains 6-directional, mandatory being built on top of Unciv
-- Original tiles and sprites
-- Maximum preservation of orginal sprites
-- 1:4 scale Britannia map (128^2) is still vast
-- Terrain sprites gain more natural graphical transition
+- Original tiles and sprites from fan-dev tilesheet sprite rips
+- Maximum preservation of orginal sprites, augmented where needed
+- 1:4 scale Britannia map (128^2) is vast despite being quarter-sized
+- Terrain sprites overlap with more natural graphical transition
 - Feature sprites (like forests) are layered for Unciv gameplay, looking completely original at game start
 - Treasures hidden throughout the world, inclusive of expected reagents
 - Exploration "feel" *closely* retained in a world of adventure
@@ -39,13 +43,13 @@ Primary mod use is theming the Ultima V overworld map [Britannia](https://github
 ![](https://raw.githubusercontent.com/hackedpassword/Unciv-Assets/refs/heads/main/Images/Ultima%20V/adventure01.png)
   
 - Custom [Shadowlord realm themed borders](https://github.com/hackedpassword/Ethereal-borders) look like wild energy barriers (probably the coolest Unciv edge mod to date!)
-- Towns, shrines, abbeys, moongates and dungeons
+- Towns, shrines, abbeys, moongates and dungeons are re-themed buildings, improvements, and wonders
 - Road Improvements for paths
-- Carefully hand-placed resources across the land for an amazingly balanced game as civs scale, from start to end
-- Meaningful economics and trading due to resource placement
-- Layered sprites partially conceal items to be discovered
-- Units re-themed
+- Carefully hand-placed resources across the land for an **amazingly balanced** game as civs scale, from start to end
+- **Meaningful economics** and trading due to smart resource placement (eliminated resource spam)
+- Layered sprites partially conceal items to be discovered making exploration actually rewarding to the player
 - Intense attention to crafting the map as accurately as possible factoring both hex->square and quarter-scale design challenges
+- **Split-resource tiles**. The lighthouse Fogsbane for example is Landmark + Stone, so one could erect a Quarry, in place of the Landmark. You choose!
 
 ![](https://raw.githubusercontent.com/hackedpassword/Unciv-Assets/main/Images/Ethereal%20borders/Screenie1.png)
 
@@ -61,13 +65,17 @@ Primary mod use is theming the Ultima V overworld map [Britannia](https://github
 ![](https://raw.githubusercontent.com/hackedpassword/Unciv-Assets/refs/heads/main/Images/Ultima%20V/u5map01.png)
 
 ## How do I get this because it sounds awesome!
-1. Download Unciv
-2. Within Unciv, in the Mods menu download `Ultima tileset` mod, `Ethereal borders` mod, and [Nextgen Maps](https://github.com/hackedpassword/Nextgen-Maps) mod
-3. In the New Game screen choose "Custom map", look for Britannia, select
-4. Make sure `Ultima tileset` and `Ethereal borders` are selected mods
-5. Add some civs and nations, I think 12 civs and 20 nations should provide plenty of unrushed exploration and foundation
 
-![](https://raw.githubusercontent.com/hackedpassword/Unciv-Assets/refs/heads/main/Images/Ultima%20V/adventure02.png)
+The mod is modularized atm, so you'll need complimentary mods:
+
+1. Download Unciv
+2. IMPORTANT: Enable HexaRealm tileset and FantasyHex unitset in Options > Display (until the mod converts fully we fill in missing assets from default tilesets)
+3. Within Unciv, in the Mods menu download: 1. `Ultima retroset` mod, 2. `Ethereal borders` mod, and 3. [Nextgen Maps](https://github.com/hackedpassword/Nextgen-Maps) mod (that's 3 mods total)
+4. In the New Game screen, select G&K base ruleset, set Map Type to "Custom", set Map Mod to "Nextgen Maps", select map Britannia
+5. Enable the mods `Ultima retroset` and `Ethereal borders`
+6. Add some civs and nations. 12 civs and 20 nations should provide plenty of unrushed exploration and casual gameplay. Start your new game!
+
+![](https://raw.githubusercontent.com/hackedpassword/Unciv-Assets/refs/heads/main/Images/Ultima%20V/adventure02a.png)
 
 For a comparison, here's the original graphics:
 ![](https://github.com/hackedpassword/Unciv-Assets/blob/main/Images/Ultima%20V/original_map-at-cove.png)
