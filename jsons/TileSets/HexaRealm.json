@@ -51,16 +51,17 @@
 	"Grassland+Hill+Stone+Mine": ["Grassland","Hill","Stone","Mine"],
 	"Grassland+Hill+Silver+Mine": ["Grassland","Hill","Hill+Mine","Silver"],
 	"Grassland+Hill+Gold Ore+Mine": ["Grassland","Hill","Gold Ore","Locksmith"],
-	"Grassland+Hill+Iron+Mine": ["Grassland","Hill","Iron","Armory"],
+	"Grassland+Hill+Iron+Mine": ["Grassland","Hill","Iron","Brazier","Bellows","Armory","Anvil"],
 	"Grassland+Hill+Coal+Mine": ["Grassland","Hill","Hill+Mine","Coal"],
-	"Grassland+Hill+Aluminum+Mine": ["Grassland","Hill","Aluminum","Armory"],
+	"Grassland+Hill+Aluminum+Mine": ["Grassland","Hill","Aluminum","Brazier","Bellows","Armory","Anvil"],
 
-	"Grassland+Iron+Mine": ["Grassland","Iron","Armory"],
-	"Grassland+Aluminum+Mine": ["Grassland","Aluminum","Armory"],
-	"Grassland+Gems+Mine": ["Grassland","Gems","Crystalball"],
+	"Grassland+Iron+Mine": ["Grassland","Iron","Brazier","Bellows","Armory","Anvil"],
+	"Grassland+Aluminum+Mine": ["Grassland","Aluminum","Brazier","Bellows","Armory","Anvil"],
 
-	"Desert+Aluminum+Mine": ["Desert","Aluminum","Armory"],
-	"Desert+Hill+Aluminum+Mine": ["Desert","Hill","Aluminum","Armory"],
+	"Desert+Aluminum+Mine": ["Desert","Aluminum","Brazier","Bellows","Armory","Anvil"],
+	"Desert+Hill+Aluminum+Mine": ["Desert","Hill","Aluminum","Brazier","Bellows","Armory","Anvil"],
+
+	"Grassland+Gems+Mine": ["Grassland","Crystalball","Gems"],
 
 	"Grassland+Hill+Stone+Quarry": ["Grassland","Hill","QuarryH"],
 
