@@ -14,7 +14,6 @@
 	// only addressing tiles/combos specific to this mod. Map gen will be weird
 
 
-
 	"Grassland+Forest+Jungle": ["Grassland","JungleG"],  // too much visual density with both
 	"Grassland+Jungle+Forest": ["Grassland","ForestG","JungleG"],
 	"Grassland+Forest+Marsh": ["Grassland","Marsh","ForestG"],
@@ -25,6 +24,8 @@
 	"Grassland+Hill+Jungle": ["Grassland","Hill","JungleG"],
 	"Grassland+Hill+Forest+Jungle": ["Grassland","Hill","JungleG"],
 	"Desert+Hill": ["Desert","Hill"],
+
+	"Desert+Farm": ["Desert","FarmD"],
 
 	"Grassland+Hill+Mine": ["Grassland","Hill","Hill+Mine"],
 	"Plains+Hill+Mine": ["Plains","Hill","Hill+Mine"],
@@ -49,13 +50,17 @@
 
 	"Grassland+Hill+Stone+Mine": ["Grassland","Hill","Stone","Mine"],
 	"Grassland+Hill+Silver+Mine": ["Grassland","Hill","Hill+Mine","Silver"],
-	"Grassland+Hill+Gold Ore+Mine": ["Grassland","Hill","Hill+Mine","Gold Ore"],
+	"Grassland+Hill+Gold Ore+Mine": ["Grassland","Hill","Gold Ore","Locksmith"],
 	"Grassland+Hill+Iron+Mine": ["Grassland","Hill","Iron","Armory"],
 	"Grassland+Hill+Coal+Mine": ["Grassland","Hill","Hill+Mine","Coal"],
 	"Grassland+Hill+Aluminum+Mine": ["Grassland","Hill","Aluminum","Armory"],
 
 	"Grassland+Iron+Mine": ["Grassland","Iron","Armory"],
 	"Grassland+Aluminum+Mine": ["Grassland","Aluminum","Armory"],
+	"Grassland+Gems+Mine": ["Grassland","Gems","Crystalball"],
+
+	"Desert+Aluminum+Mine": ["Desert","Aluminum","Armory"],
+	"Desert+Hill+Aluminum+Mine": ["Desert","Hill","Aluminum","Armory"],
 
 	"Grassland+Hill+Stone+Quarry": ["Grassland","Hill","QuarryH"],
 
@@ -69,6 +74,12 @@
 	"Grassland+Forest+Jungle+Iron": ["Grassland","JungleG","Iron","ForestG"],
 	"Grassland+Forest+Jungle+Aluminum": ["Grassland","JungleG","Aluminum","ForestG"],
 	"Grassland+Forest+Aluminum": ["Grassland","Aluminum","ForestG"],
+
+        "Grassland+Coal+Mine": ["Grassland","Stove","Coal","Candlesign"],
+        "Grassland+Hill+Coal+Mine": ["Grassland","Hill","Stove","Coal","Candlesign"],
+
+        "Grassland+Wine+Plantation": ["Grassland","Wine","Shop","Drinksign"],
+        "Grassland+Hill+Wine+Plantation": ["Grassland","Hill","Wine","Shop","Drinksign"],
 
 // sprite manipulators - non-standard uses of sprites
 
@@ -113,15 +124,18 @@
         "Grassland+Uranium+Mine": ["Grassland","Bookshelf","Uranium","Uranium+Mine"],
         "Grassland+Hill+Uranium+Mine": ["Grassland","Hill","Bookshelf","Uranium","Uranium+Mine"],
 
-        "Grassland+Coal+Mine": ["Grassland","Shop","Coal","Coal+Mine"],
-        "Grassland+Hill+Coal+Mine": ["Grassland","Hill","Shop","Coal","Coal+Mine"],
 
 	// Cactus
-	"Desert+Wheat": ["Desert","Desert+Wheat"],	// Cactus (not sandlewood box)
+	"Desert+Wheat": ["Desert","Desert+Wheat"],  // Cactus (not sandlewood box)
+	"Desert+Wheat+Fort": ["Desert","Fort","Desert+Wheat"],
+	"Desert+Wheat+Citadel": ["Desert","Citadel","Desert+Wheat"],
 	"Desert+Wheat+Plantation": ["Desert","Plantation","Desert+Wheat"],
-	"Desert+Farm": ["Desert","FarmD"],
 	"Desert+Wheat+Farm": ["Desert","FarmD","Desert+Wheat"],	// Farm with Cactus
 	"Desert+Wheat+Manufactory": ["Desert","Manufactory","Desert+Wheat"],
+	"Desert+Wheat+Customs house": ["Desert","Customs house","Desert+Wheat"],
+	"Desert+Wheat+Holy site": ["Desert","Holy site","Desert+Wheat"],
+	"Desert+Wheat+Landmark": ["Desert","Landmark","Desert+Wheat"],
+	"Desert+Wheat+Academy": ["Desert","Academy","Desert+Wheat"],
 
 	// Forts
 	"Grassland+Fort": ["Grassland","Fort"],
@@ -134,6 +148,7 @@
 	"Grassland+Hill+Fort": ["Grassland","Hill","Fort"],
 	"Grassland+Hill+Forest+Fort": ["Grassland","Hill","Fort","ForestG"],
 	"Grassland+Hill+Forest+Jungle+Fort": ["Grassland","Hill","Fort","JungleG"],
+
 	// Citadels
 	"Grassland+Citadel": ["Grassland","Citadel"],  // Using Academy/Fortress as the sprite (for all Citadels)
 	"Plains+Citadel": ["Plains","Citadel"],
@@ -146,10 +161,8 @@
 	"Grassland+Hill+Forest+Citadel": ["Grassland","Hill","Citadel","ForestG"],
 	"Grassland+Hill+Forest+Jungle+Citadel": ["Grassland","Hill","Citadel","JungleG"],  // not sure this exists in the map
 
-	// Paths! ... shoot, watch for dupe path naming issues w/ terrainfeature/improvement (so far none)
-	// Base terrain is plains only atm. Supported improvements are fort and citadel.
-	// fyi this is indeed a small asset management pain for improvement matrixes
-
+	// Paths
+	// Forts and citadels don't place on path terrainfeatures atm while not a base mod, ignore til later
 	"Plains+Path+Fort": ["Plains","Path","Fort"],
 	"Plains+Path low+Fort": ["Plains","Path low","Fort"],
 	"Plains+Path low west+Fort": ["Plains","Path low west","Fort"],
@@ -183,24 +196,62 @@
 	"Plains+Path high east+Citadel": ["Plains","Path high east","Citadel"],
 
 	// Improvements on bridges
-	"Desert+Flood plains": ["Desert+Flood plains","Flood plains"], // Horizontal bridge
-	"Desert+Flood plains+Cotton": ["Desert+Flood plains","Flood plains","Cotton"],
-	"Desert+Flood plains+Cotton+Plantation": ["Desert+Flood plains","Flood plains","Cotton","Plantation"],
 	"Desert+Flood plains+Citadel": ["Desert+Flood plains","Flood plains","Citadel"],
 	"Desert+Flood plains+City center": ["Desert+Flood plains","Flood plains","City center"],
 	"Desert+Flood plains+City ruins": ["Desert+Flood plains","Flood plains","City ruins"],
 	"Desert+Flood plains+Customs house": ["Desert+Flood plains","Flood plains","Customs house"],
-	"Desert+Flood plains+Farm": ["Desert+Flood plains","Flood plains","Farm"],
-	"Desert+Flood plains+Incense": ["Desert","Flood plains+Wheat","Incense"],
-	"Desert+Flood plains+Incense+Plantation": ["Desert","Flood plains+Wheat","Incense","Plantation"],
 	"Desert+Flood plains+Holy site": ["Desert+Flood plains","Flood plains","Holy site"],
 	"Desert+Flood plains+Landmark": ["Desert+Flood plains","Flood plains","Landmark"],
 	"Desert+Flood plains+Manufactory": ["Desert+Flood plains","Flood plains","Manufactory"],
+	"Desert+Flood plains+Academy": ["Desert+Flood plains","Flood plains","Academy"],
 	"Desert+Flood plains+Trading post": ["Desert+Flood plains","Flood plains","Trading post"],
 
+	"Desert+Flood plains": ["Desert+Flood plains","Flood plains"], // Horizontal bridge
+	"Desert+Flood plains+Cotton": ["Desert+Flood plains","Flood plains","Cotton"],
+	"Desert+Flood plains+Cotton+Plantation": ["Desert+Flood plains","Flood plains","Cotton","Plantation"],
+	"Desert+Flood plains+Cotton+Trading post": ["Desert+Flood plains","Flood plains","Trading post","Cotton"],
+	"Desert+Flood plains+Cotton+Academy": ["Desert+Flood plains","Flood plains+Wheat","Academy","Cotton"],
+	"Desert+Flood plains+Cotton+Landmark": ["Desert+Flood plains","Flood plains+Wheat","Landmark","Cotton"],
+	"Desert+Flood plains+Cotton+Manufactory": ["Desert+Flood plains","Flood plains+Wheat","Manufactory","Cotton"],
+	"Desert+Flood plains+Cotton+Customs house": ["Desert+Flood plains","Flood plains+Wheat","Customs house","Cotton"],
+	"Desert+Flood plains+Cotton+Holy site": ["Desert+Flood plains","Flood plains+Wheat","Holy site","Cotton"],
+	"Desert+Flood plains+Cotton+Citadel": ["Desert+Flood plains","Flood plains","Cotton","Citadel"],
+	"Desert+Flood plains+Cotton+City ruins": ["Desert+Flood plains","Flood plains","City ruins","Cotton"],
+
+	"Desert+Flood plains+Farm": ["Desert+Flood plains","FarmD"],
 	"Desert+Flood plains+Wheat": ["Desert+Flood plains","Flood plains+Wheat"],  // Vertical bridge, this is how we fudge bridge rotation
-	"Desert+Flood plains+Wheat+Plantation": ["Desert+Flood plains","Flood plains+Wheat","Plantation"],
-	"Desert+Flood plains+Wheat+Farm": ["Desert+Flood plains","Flood plains+Wheat","Farm"],
+	"Desert+Flood plains+Wheat+Farm": ["Desert+Flood plains","FarmD"],
+	"Desert+Flood plains+Wheat+Trading post": ["Desert+Flood plains","Flood plains+Wheat","Trading post","Wheat"],
+	"Desert+Flood plains+Wheat+Academy": ["Desert+Flood plains","Flood plains+Wheat","Academy","Wheat"],
+	"Desert+Flood plains+Wheat+Landmark": ["Desert+Flood plains","Flood plains+Wheat","Landmark","Wheat"],
+	"Desert+Flood plains+Wheat+Manufactory": ["Desert+Flood plains","Flood plains+Wheat","Manufactory","Wheat"],
+	"Desert+Flood plains+Wheat+Customs house": ["Desert+Flood plains","Flood plains+Wheat","Customs house","Wheat"],
+	"Desert+Flood plains+Wheat+Holy site": ["Desert+Flood plains","Flood plains+Wheat","Holy site","Wheat"],
+	"Desert+Flood plains+Wheat+Citadel": ["Desert+Flood plains","Flood plains+Wheat","Citadel","Wheat"],
+	"Desert+Flood plains+Wheat+City ruins": ["Desert+Flood plains","Flood plains+Wheat","City ruins","Wheat"],
+
+	"Desert+Flood plains+Incense": ["Desert+Flood plains","Flood plains","Incense"],
+	"Desert+Flood plains+Incense+Farm": ["Desert+Flood plains","FarmD","Incense"],
+	"Desert+Flood plains+Incense+Plantation": ["Desert+Flood plains","FarmD","Plantation"], // Resource improvements on bridges will not be allowed later
+	"Desert+Flood plains+Incense+Trading post": ["Desert+Flood plains","Flood plains+Wheat","Trading post","Incense"],
+	"Desert+Flood plains+Incense+Academy": ["Desert+Flood plains","Flood plains+Wheat","Academy","Incense"],
+	"Desert+Flood plains+Incense+Landmark": ["Desert+Flood plains","Flood plains+Wheat","Landmark","Incense"],
+	"Desert+Flood plains+Incense+Manufactory": ["Desert+Flood plains","Flood plains+Wheat","Manufactory","Incense"],
+	"Desert+Flood plains+Incense+Customs house": ["Desert+Flood plains","Flood plains+Wheat","Customs house","Incense"],
+	"Desert+Flood plains+Incense+Holy site": ["Desert+Flood plains","Flood plains+Wheat","Holy site","Incense"],
+	"Desert+Flood plains+Incense+Citadel": ["Desert+Flood plains","Flood plains+Wheat","Incense","Citadel"],
+	"Desert+Flood plains+Incense+City ruins": ["Desert+Flood plains","Flood plains+Wheat","City ruins","Incense"],
+
+	"Desert+Flood plains+Aluminum": ["Desert+Flood plains","Flood plains","Aluminum"],
+	"Desert+Flood plains+Aluminum+Mine": ["Desert+Flood plains","Flood plains","Aluminum","Armory"],
+	"Desert+Flood plains+Aluminum+Trading post": ["Desert+Flood plains","Flood plains+Wheat","Trading post","Aluminum"],
+	"Desert+Flood plains+Aluminum+Academy": ["Desert+Flood plains","Flood plains+Wheat","Academy","Aluminum"],
+	"Desert+Flood plains+Aluminum+Landmark": ["Desert+Flood plains","Flood plains+Wheat","Landmark","Aluminum"],
+	"Desert+Flood plains+Aluminum+Manufactory": ["Desert+Flood plains","Flood plains+Wheat","Manufactory","Aluminum"],
+	"Desert+Flood plains+Aluminum+Customs house": ["Desert+Flood plains","Flood plains+Wheat","Customs house","Aluminum"],
+	"Desert+Flood plains+Aluminum+Holy site": ["Desert+Flood plains","Flood plains+Wheat","Holy site","Aluminum"],
+	"Desert+Flood plains+Aluminum+Citadel": ["Desert+Flood plains","Flood plains+Wheat","Aluminum","Citadel"],
+	"Desert+Flood plains+Aluminum+Citadel": ["Desert+Flood plains","Flood plains+Wheat","City ruins","Aluminum"],
 
 	"Snow+Hill+Uranium+Mine": ["Grassland+Hill","Snow+Hill+Mine"],	// glass sword
 
