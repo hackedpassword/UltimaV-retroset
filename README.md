@@ -6,6 +6,15 @@ Not _entirely_ complete yet - things like pillaged improvements and nuance tile 
 
 # Updates
 
+Square tiles are cool, with edges even better. But one of the attractions to the original U5 was its sprite palette of angled terrain edges. Replicating this in Unciv is not trivial, though it seems to be possible as seen in the demo image.
+
+There's only two edge terrainfeatures for the moment. With only two, the amount of natural edging possibilities suddenly goes way up, wow. Topside of the sprite, due to rendering, rivers can be overdrawn as shown below ... hmm could lead to something even more.
+
+The immediate drawback to this process is the effect on layered terrainfeatures and improvements. Already seen this with `path` so nothing new there.
+
+![](https://raw.githubusercontent.com/hackedpassword/Unciv-Assets/refs/heads/main/Images/Ultima%20V/Water%20edges%201.png)
+
+
 Updated the installation section below, now accurate and easy to follow! 👍
 
 Finally solved how to accomplish paths! Latest preview with modified Road.png hits the mark:
