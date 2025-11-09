@@ -17,6 +17,10 @@ The immediate drawback to this process is the effect on layered terrainfeatures 
 
 Updated the installation section below, now accurate and easy to follow! 👍
 
+Nov 2025 in-game look. New forts - fun concept here, using the shadowlord realm as a meta fortress barrier. Forever now, Academy and Fort have shared sprites. The darkened fort color based on [Stonegate's layout/colors](https://geocities.bootstrike.com/Ultima%20V%20Detailed%20Maps/u5/stonegte.gif), contrasted by surrounding realm field neon magenta at a low perspective (and some alpha blend).
+
+![](https://raw.githubusercontent.com/hackedpassword/Unciv-Assets/refs/heads/main/Images/Ultima%20V/Serpents%20hold%20island.png)
+
 Finally solved how to accomplish paths! Latest preview with modified Road.png hits the mark:
 
 ![](preview.png)
