@@ -1,5 +1,21 @@
 [
 	{
+		"name": "GrasslandNE",
+		"type": "TerrainFeature",
+		"unbuildable": true,
+		"occursOn": ["Lakes"],
+		"uniques": [
+		],
+	},
+	{
+		"name": "GrasslandSW",
+		"type": "TerrainFeature",
+		"unbuildable": true,
+		"occursOn": ["Grassland"],
+		"uniques": [
+		],
+	},
+	{
 		"name": "Path",
 		"type": "TerrainFeature",
 //		"movementCost": 3,
