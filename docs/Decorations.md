@@ -52,8 +52,54 @@ Because the decor here has an opaque area and mostly alpha clear area, when it's
 
 ### POI (3)
 
-You'll notice the swamp entrance has a much more natural appearance. Just a few decors did it. The result? Wow. I threw in a couple extra water features that would usually have a river stub to affect movement and whatnot correctly.
+You'll notice the swamp entrance has a much more natural appearance. Just a few decors did it. The result? _**Wow.**_ For fun, I threw in a couple extra water features that would usually have a river stub to affect movement and whatnot correctly. The overlay effect was too amazing to remove.
 
-Rivers are invisible textures in-game! Well, how do handle map placement? We have a set of river-editor textures (the pink ones). These are specifically designed to be brightly edged, dim transparent core, to clearly see where we are placing rivers, and, clearly see that rivers _are_ placed. This is not a guessing game, we get it right. Decor rivers are placed, we're certain because the resulting blends look like what we're expecting.
+**Rivers are _invisible_ textures in-game!** Look again at POI (1), the rivers are there, but some mapper needs to place decor rivers. Well, how do handle map placement? We have a set of river-editor textures (the pink ones). These are specifically designed to be brightly edged, dim transparent core, to clearly see where we are placing rivers, and, clearly see that rivers _are_ placed. This is not a guessing game, we get it right. Decor rivers are placed, and we're certain they're right because the resulting blends look like what we're expecting.
 
+Oh, forgot to add, as seen on the sprite map above, original river sprites are available as decors too. This requires some additional work in `Terrains.json`. I can add new river sets at will. This area has this type, that area has that type, maybe some special alternative mid-river, whatever, control over artistic variety is ours!
 
+```
+	{
+		"name": "River-Bottom decor",
+		"type": "TerrainFeature",
+		"unbuildable": true,
+		"occursOn": ["Land","Grassland","Mountain","Plains","Desert"],
+		"uniques": ["TerrainDecor","River",
+		],
+	},
+```
+
+The `occursOn` array needs each terrain to be used on. For some reason 'Land' is not an acceptable wildcard. We add a label 'TerrainDecor' to be used later, and 'River' to take on river attributes - a special entity in Unciv that we must mind is treated differently than other entities.
+
+### POI (4) and (5)
+
+An interesting problem arose with edges. Applying the water corners at Coast edges doesn't draw over edges. This iirc was due to that hexes are drawn tile by tile in reading order. Whatever the reason the solution was creating a new terrain clone of Coast. There is no edge texture set for this terrain tile so edges are poof gone. As you see by the missing right edge, this needs more work, superficially simple just adding specific edge assets.
+
+Coast-edgeless is applied as a replacement Coast in Terrains.json:
+```
+	{
+		"name": "Coast edgeless",
+		"type": "Water",
+		"food": 1,
+        	"gold": 1,
+		"movementCost": 1,
+		"RGB": [70, 138, 216],
+		"uniques": ["Coast","[+2] to Fertility for Map Generation",
+...
+```
+
+The only modification to Coast is adding the unique label 'Coast'. What this does is causes assets involved with Coast-edgeless to inherit Coast attributes. Through this inheritence, we don't have to update every single unique that has some connection to Coast. Easy!
+
+Resources are the next challenge, they're not as drop-in as I'd like. In `TileResources.json` we add:
+```
+	{
+		"name": "Fish",
+		"resourceType": "Bonus",
+		"terrainsCanBeFoundOn": ["Coast","Coast edgeless"],
+		"food": 1,
+		"improvement": "Fishing Boats",
+		"uniques": ["Generated on every [10] tiles <in [{Featureless} {Coast}] tiles>"]
+	},
+```
+
+We see here the addendum to where Fish can be found, because inheritence doesn't work on that attribute. However, the unique references 'Coast', which should work for map gen. Map placement for Fish won't work on Coast-edgeless unless that update is applied to Fish.
