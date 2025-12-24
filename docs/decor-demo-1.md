@@ -1,6 +1,6 @@
-### decor_demo
-
 _click image to proceed to next image_
+
+### decor_demo
 [![decor-demo_1](https://raw.githubusercontent.com/hackedpassword/Unciv-Assets/refs/heads/main/Images/Ultima%20V/decor_demo/decor-demo_1.png)](./decor-demo-2.md#decor_demo)
 
 [◀ back](./Decorations.md) | [next ▶](./decor-demo-2.md#decor_demo) | [return ↶](./Decorations.md)
