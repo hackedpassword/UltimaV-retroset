@@ -21,7 +21,7 @@ A visual step-through should tell you most of what you want to know. I think thi
 
 ## Tech
 
-Now, we will look closer at certain decor aspects as presented above.
+Now, we will look closer at certain decor aspects of the swamp area as presented above in image 8.
 
 ### POI (1)
 
@@ -52,7 +52,7 @@ Recall Ultima V mod scales Brittania 1:4, squares vs hexes, making river placeme
 		"name": "GrasslandSE",
 		"type": "TerrainFeature",
 		"unbuildable": true,
-		"occursOn": ["Grassland","Plains"],
+		"occursOn": ["Grassland","Plains","Desert"],
 		"uniques": ["TerrainDecor","Grassland","Land",
 		],
 	},
@@ -106,6 +106,77 @@ Coast-edgeless is applied as a replacement Coast in Terrains.json:
 
 The only modification to Coast is adding the unique label 'Coast'. What this does is causes assets involved with Coast-edgeless to inherit Coast attributes. Through this inheritence, we don't have to update every single unique that has some connection to Coast. Easy!
 
+## River map editing
+
+### Background
+In my background, which goes back to [mapping for Quake 3](https://worldofpadman.net/en/tutorials/converting-brushwork-from-a-map-into-an-ase-map-object/), the [editor Gtk Radiant](https://worldofpadman.net/wp-content/uploads/woptut_map2asebrushwork-728x409.jpg) would reference [shader files](https://icculus.org/gtkradiant/documentation/Q3AShader_Manual/ch01/pg1_1.htm#what), and the mapper could specify `qer_editorimage [textures/[path/image.tga]]` to use a [different editor image to represent the shader texture](https://icculus.org/gtkradiant/documentation/Q3AShader_Manual/ch04/pg4_1.htm#edimg).
+
+![](https://worldofpadman.net/wp-content/uploads/woptut_map2asebrushwork-728x409.jpg)
+
+The editorimage was super-handy, especially when the final rendered texture was non-deterministic, due to shader manipulations via multi-texture layering (like we're doing here), blend operations, vertex manipulation, various emmissions, and plenty of [other fancy effects](https://icculus.org/gtkradiant/documentation/Q3AShader_Manual/ch05/pg5_1.htm#tcmod) (tcmod turb was especially fun).
+
+Setting up geometry usually involved "caulk", the pink stuff you see above. This acted as an invisible solid collision surface, used mostly when setting up structures for textures/shaders to be applied upon. The pink caulk would render as an invisible surface, still solid blocking weapons/movement. Ok I've stretched this out pretty far but that's because I've applied the same principles to River terrainDecor, more importantly, opened up a new venue of map dev tools for Unciv. This means we could for example split Forest into more layers for whatever reason, perhaps caulk a Forest editorimage, then later swap the editorimage for the game asset. That's a very simple example.
+
+### The business end
+
+Here's the file structure for just the rivers - this structure is necessary in terms of good asset management.
+```
+## Tile images
+mods/UltimaV tileset/Images/TileSets/HexaRealm/Tiles/
+River-Bottom decor.png
+River-Bottom.png
+River-BottomLeft decor.png
+River-BottomLeft.png
+River-BottomRight decor.png
+River-BottomRight.png
+
+## Source for decor caulk
+rivers/
+River-all.psd
+
+## Source of terrainDecor tile images, copied to ../..
+Tiles/rivers/decor/
+River-Bottom decor.png
+River-BottomLeft decor.png
+River-BottomRight decor.png
+
+## Source caulk images copied to ../.. during map dev
+Tiles/rivers/dev/
+River-Bottom.png
+River-BottomLeft.png
+River-BottomRight.png
+update_rivers.bat
+
+## Source invisible images copied to ../.. for in-game River non-rendering
+Tiles/rivers/game/
+River-Bottom.png
+River-BottomLeft.png
+River-BottomRight.png
+update_rivers.bat
+
+## Basically same as /decor, felt it has a purpose, dunno atm
+Tiles/rivers/legacy/
+River-Bottom.png
+River-BottomLeft.png
+River-BottomRight.png
+update_rivers.bat
+```
+
+update_rivers.bat:
+```
+copy /Y *.png ..\..
+```
+
+If I'm doing map dev, I run update_rivers from /dev, hit my shortcut that does an atlas regen, runs Unciv. When I want to see the in-game result, I do the same steps from /game. With keyboard shortcuts set up plus .bat file automation, moving between the two states are fast and painless.
+
+### Obligatory nostalgia
+
+omg I miss the q3 shader manual, haven't looked at this in yearsss. Used to surf through it daily as if my gaming bible. For real. I had a printed binder with plastic sheet protectors - other mappers and some devs found this an impressive step up in q3 map dev. Had a couple gamers from my clan over to my house, they treated the binder like an actual treasured artifact. Good times. Hmm.. if it weren't for Unciv continuously evolving it's a tempting idea to recreate.
+
+Shout out to [World of Padman](https://worldofpadman.net/) (where I found the Gtk editor images) ... this total conversion q3 mod still persists?? That's awesome!
+
+## More decoration aspects
+
 Resources are the next challenge, they're not as drop-in as I'd like. In `TileResources.json` we add:
 ```
 	{
@@ -119,3 +190,16 @@ Resources are the next challenge, they're not as drop-in as I'd like. In `TileRe
 ```
 
 We see here the addendum to where Fish can be found, because inheritence doesn't work on that attribute. However, the unique references 'Coast', which should work for map gen. Map placement for Fish won't work on Coast-edgeless unless that update is applied to Fish.
+
+### Decor math
+
+Here's a handy visual to see what decor can accomplish, the fine tuning possible, for any custom presentation desired. Don't forget, the resulting look of any combo here may appear bad, but in-game with other adjacencies, it could be just the combo needed!
+
+![](https://raw.githubusercontent.com/hackedpassword/Unciv-Assets/refs/heads/main/Images/Ultima%20V/decor_demo/layer_demo.png)
+
+## Conclusion
+
+What's actually new here:
+- Rendering River (each of the 3 directions) as invisible textures
+- Using editor images for map dev
+
