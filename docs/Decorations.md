@@ -108,6 +108,8 @@ The only modification to Coast is adding the unique label 'Coast'. What this doe
 
 ## River map editing
 
+Reference [image 4](https://raw.githubusercontent.com/hackedpassword/Unciv-Assets/refs/heads/main/Images/Ultima%20V/decor_demo/decor-demo_4.png) for context.
+
 ### Background
 In my background, which goes back to [mapping for Quake 3](https://worldofpadman.net/en/tutorials/converting-brushwork-from-a-map-into-an-ase-map-object/), the [editor Gtk Radiant](https://worldofpadman.net/wp-content/uploads/woptut_map2asebrushwork-728x409.jpg) would reference [shader files](https://icculus.org/gtkradiant/documentation/Q3AShader_Manual/ch01/pg1_1.htm#what), and the mapper could specify `qer_editorimage [textures/[path/image.tga]]` to use a [different editor image to represent the shader texture](https://icculus.org/gtkradiant/documentation/Q3AShader_Manual/ch04/pg4_1.htm#edimg).
 
