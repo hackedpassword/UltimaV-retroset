@@ -1,0 +1,10 @@
+### decor_demo
+
+_click image to proceed to next image_
+[![decor-demo_5](https://raw.githubusercontent.com/hackedpassword/Unciv-Assets/refs/heads/main/Images/Ultima%20V/decor_demo/decor-demo_5.png)](./decor-demo-6.md#decor_demo)
+
+[◀ back](./decor-demo-4.md#decor_demo) | [next ▶](./decor-demo-6.md#decor_demo) | [return ↶](./Decorations.md)
+
+| image 1 | image 2 | image 3 | image 4 | **[image 5]** | image 6 | image 7 | image 8 |
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| [<img src="https://raw.githubusercontent.com/hackedpassword/Unciv-Assets/refs/heads/main/Images/Ultima%20V/decor_demo/decor-demo_1.png"/>](./decor-demo-1.md#decor_demo) | [<img src="https://raw.githubusercontent.com/hackedpassword/Unciv-Assets/refs/heads/main/Images/Ultima%20V/decor_demo/decor-demo_3.png"/>](./decor-demo-2.md#decor_demo) | [<img src="https://raw.githubusercontent.com/hackedpassword/Unciv-Assets/refs/heads/main/Images/Ultima%20V/decor_demo/decor-demo_2.png"/>](./decor-demo-3.md#decor_demo) | [<img src="https://raw.githubusercontent.com/hackedpassword/Unciv-Assets/refs/heads/main/Images/Ultima%20V/decor_demo/decor-demo_4.png"/>](./decor-demo-4.md#decor_demo) | [<img src="https://raw.githubusercontent.com/hackedpassword/Unciv-Assets/refs/heads/main/Images/Ultima%20V/decor_demo/decor-demo_5.png"/>](./decor-demo-5.md#decor_demo) | [<img src="https://raw.githubusercontent.com/hackedpassword/Unciv-Assets/refs/heads/main/Images/Ultima%20V/decor_demo/decor-demo_6.png"/>](./decor-demo-6.md#decor_demo) | [<img src="https://raw.githubusercontent.com/hackedpassword/Unciv-Assets/refs/heads/main/Images/Ultima%20V/decor_demo/decor-demo_8.png"/>](./decor-demo-7.md#decor_demo) | [<img src="https://raw.githubusercontent.com/hackedpassword/Unciv-Assets/refs/heads/main/Images/Ultima%20V/decor_demo/decor-demo_7.png"/>](./decor-demo-8.md#decor_demo) |
