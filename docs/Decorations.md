@@ -12,17 +12,16 @@ There's several components to successfully implement decorations.
 
 A visual step-through should tell you most of what you want to know. I think this technique is probably easier with square-hex tiles due to less sides, but plenty of application to hex tiles. We'll focus on square-hex tiles atm. How-to follows.
 
-|  |  |
+| Swamp demo |  |
 | ------- | ------- |
-| ![](https://raw.githubusercontent.com/hackedpassword/Unciv-Assets/refs/heads/main/Images/Ultima%20V/decor_demo/decor-demo_1.png) | ![](https://raw.githubusercontent.com/hackedpassword/Unciv-Assets/refs/heads/main/Images/Ultima%20V/decor_demo/decor-demo_2.png) |
-| ![](https://raw.githubusercontent.com/hackedpassword/Unciv-Assets/refs/heads/main/Images/Ultima%20V/decor_demo/decor-demo_3.png) | ![](https://raw.githubusercontent.com/hackedpassword/Unciv-Assets/refs/heads/main/Images/Ultima%20V/decor_demo/decor-demo_4.png) |
-| ![](https://raw.githubusercontent.com/hackedpassword/Unciv-Assets/refs/heads/main/Images/Ultima%20V/decor_demo/decor-demo_5.png) | ![](https://raw.githubusercontent.com/hackedpassword/Unciv-Assets/refs/heads/main/Images/Ultima%20V/decor_demo/decor-demo_6.png) |
+| image 1![](https://raw.githubusercontent.com/hackedpassword/Unciv-Assets/refs/heads/main/Images/Ultima%20V/decor_demo/decor-demo_1.png)| image 2 - [credit](https://drrak.github.io/ultima5/)![](https://raw.githubusercontent.com/hackedpassword/Unciv-Assets/refs/heads/main/Images/Ultima%20V/decor_demo/decor-demo_3.png) |
+| image 3![](https://raw.githubusercontent.com/hackedpassword/Unciv-Assets/refs/heads/main/Images/Ultima%20V/decor_demo/decor-demo_2.png) | image 4![](https://raw.githubusercontent.com/hackedpassword/Unciv-Assets/refs/heads/main/Images/Ultima%20V/decor_demo/decor-demo_4.png) |
+| image 5![](https://raw.githubusercontent.com/hackedpassword/Unciv-Assets/refs/heads/main/Images/Ultima%20V/decor_demo/decor-demo_5.png) | image 6![](https://raw.githubusercontent.com/hackedpassword/Unciv-Assets/refs/heads/main/Images/Ultima%20V/decor_demo/decor-demo_6.png) |
+| image 7![](https://raw.githubusercontent.com/hackedpassword/Unciv-Assets/refs/heads/main/Images/Ultima%20V/decor_demo/decor-demo_8.png) | image 8![](https://raw.githubusercontent.com/hackedpassword/Unciv-Assets/refs/heads/main/Images/Ultima%20V/decor_demo/decor-demo_7.png) |
 
 ## Tech
 
-Now, we will look closer at certain decor aspects as presented here:
-
-![](https://raw.githubusercontent.com/hackedpassword/Unciv-Assets/refs/heads/main/Images/Ultima%20V/decor_demo/decor-demo_7.png)
+Now, we will look closer at certain decor aspects as presented above.
 
 ### POI (1)
 
@@ -44,9 +43,26 @@ Original terrain sprites are highlighted. We then have Grassland decors as 4-cha
 
 ### POI (2)
 
-This swamp area is interesting for its use of interconnecting river textures. Recall Ultima V mod scales Brittania 1:4, squares vs hexes, making river placement an interpretive artistic task. Perfect for demo'ing!
+This swamp area is very interesting for its use of interconnecting river textures, where we can use land-specific corner decors instead of river-specific decors. 
 
-The way we lay down the decor, with all other layers, is first we must decide what order to present. A Forest then Jungle results in a different sprite than Jungle then Forest. With Grassland as the base, we could place the grasslandXX water corner decor first, then Marsh, to represent marshy water in addition to marshy land. Or, placing Marsh first then decor results in marshy land, normal water. Stacking other terrainFeatures like Forest and Jungle, or Hill, anything, all get the same treatment.
+Recall Ultima V mod scales Brittania 1:4, squares vs hexes, making river placement an interpretive artistic task. Perfect for demo'ing! Let's look at a GrasslandXX terrainDecor asset:
+
+```
+	{
+		"name": "GrasslandSE",
+		"type": "TerrainFeature",
+		"unbuildable": true,
+		"occursOn": ["Grassland","Plains"],
+		"uniques": ["TerrainDecor","Grassland","Land",
+		],
+	},
+```
+
+Building a terrainDecor is quite simple. I'm still torn on caps TerrainDecor or terrainDecor, for our purposes either is fine but for json's the above is the current use. Now, how do we do it?
+
+The way we lay down the decor, with all other layers, is first we must decide what order to present. Normally, a Forest then Jungle results in a different sprite than Jungle then Forest. With Grassland as the base, we could:
+a. place the GrasslandXX water corner decor first, then Marsh, to represent marshy water in addition to marshy land.
+b. place Marsh first, then decor, resulting in marshy land, normal water. Stacking other terrainFeatures like Forest and Jungle, or Hill, anything, all get the same treatment.
 
 Because the decor here has an opaque area and mostly alpha clear area, when it's applied over most any tile, the water edge appears and land portion appears to recess - automagic. Using these for rivers was actually accidental.
 
