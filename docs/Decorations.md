@@ -203,5 +203,12 @@ Here's a handy visual to see what decor can accomplish, the fine tuning possible
 
 What's actually new here:
 - Rendering River (each of the 3 directions) as invisible textures
-- Using editor images for map dev
+- Using editor images for map dev and swapping working images
+- Intentionally tiling no-effect terrainFeatures
+- A new game aesthetic technique with immense potential
 
+Decorations on their own are not new. Haven't looked yet, maybe 5hex tileset leaned this way. It is a bit tedious to place layers meticulously. Overall, doable.
+
+Thanks for reading, if you wanted another visual effects ability, this technique should satisfy you and your fanbase! :D
+
+@hackedpassword
