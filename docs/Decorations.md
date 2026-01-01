@@ -39,7 +39,7 @@ Rendering order artifacts lead to slop like this:
 | ------- | ------- |
 | ![](https://raw.githubusercontent.com/hackedpassword/Unciv-Assets/refs/heads/main/Images/Ultima%20V/decor_demo/river_layers_fail.png) | ![](https://raw.githubusercontent.com/hackedpassword/Unciv-Assets/refs/heads/main/Images/Ultima%20V/decor_demo/river_layers_fail2.png) 
 
-See, not only do rivers render in an order that are uncontrollable, sometimes right sometimes not, rivers specifically are unaffected by the dimming effect of being out of visual range. To compensate, I muted the river color contrast as to be a transitional color that might be dimmed, might be seen. It's not awful but also not the intended artistic output. Decor layers aim to fix this.
+Rivers render in an order that are uncontrollable, sometimes as dedsired, sometimes not. Rivers, specifically, are unaffected by the [fogOfWar](https://yairm210.github.io/Unciv/Modders/Creating-a-custom-tileset/#fogofwarcolor) tile visibility dimming effect. To compensate in Ultima V mod, creating thick rivers vs edge-line rivers, I darkened/muted the river color as to be a transitional color instead, enough to not be too distracting either when in or out of the fogOfWar. Not the intended artistic presentation. Decor layers aim to fix this.
 
 Let's take a quick look at the sprite sheet rip, and the mod sprites involved:
 
