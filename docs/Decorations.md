@@ -4,9 +4,13 @@ Let's talk about how to add some _real customization_ to an Unciv map. We'll do 
 
 **Decors** give more control over rendering rules on terrain tiles by mixing in benign entities to terrainFeatures. Another mad modder creation ;)
 
-> "Wow, wow. That's f^k'n .. COOL. Whoa. LOL!!!(more of a HUAHAHAHA)" -me dropping in the first demo decorations
+![](terrainDecor.png)
 
-There's several components to successfully implement decorations. 
+The demo map above remains 100% playable with its familiar hex `terrain` tiles. Like in Ethereal Edges mod, there is an adjustment to perceived tile proximities that adds a more natural element to an otherwise defined set of tile adjacencies.
+
+> "Wow, wow. That's f^k'n .. COOL. Whoa. LOL!!!" -me placing the first demo decorations
+
+We'll discuss the components to successfully implement decorations, focusing on rivers. In this mod, there are currently 3 sets of decors: rivers, coast edges, and paths.
 
 ## Visualized!
 
@@ -23,6 +27,8 @@ A visual step-through should tell you most of what you want to know. I think thi
 
 Now, we will look closer at certain decor aspects of the swamp area as presented above in image 8.
 
+🚨🤨 This document poses decors in an early form to bring awareness and familiarity by sharing the knowledge. On its own, anyone interested to try this theirselves will have enough information to implement decors.
+
 ### POI (1)
 
 In the demo image, you'll find the rivers in this area missing - but they're not. River textures in `TileSets\HexaRealm\Tiles` are all blank and clear. Why? Decors will replace river textures, which cannot be re-ordered in rendering, causing overlay artifacts.
@@ -33,7 +39,7 @@ Rendering order artifacts lead to slop like this:
 | ------- | ------- |
 | ![](https://raw.githubusercontent.com/hackedpassword/Unciv-Assets/refs/heads/main/Images/Ultima%20V/decor_demo/river_layers_fail.png) | ![](https://raw.githubusercontent.com/hackedpassword/Unciv-Assets/refs/heads/main/Images/Ultima%20V/decor_demo/river_layers_fail2.png) 
 
-See, not only do rivers render in an order that is uncontrollable, sometimes right sometimes not, rivers are unaffected by out-of-sight tile dimming. To compensate, I muted the river color contrast as to be a transitional color that might be dimmed, might be seen. It's not awful but also not the intended artistic output. Decor layers aim to fix this.
+See, not only do rivers render in an order that are uncontrollable, sometimes right sometimes not, rivers specifically are unaffected by the dimming effect of being out of visual range. To compensate, I muted the river color contrast as to be a transitional color that might be dimmed, might be seen. It's not awful but also not the intended artistic output. Decor layers aim to fix this.
 
 Let's take a quick look at the sprite sheet rip, and the mod sprites involved:
 
@@ -58,11 +64,13 @@ Recall Ultima V mod scales Brittania 1:4, squares vs hexes, making river placeme
 	},
 ```
 
-Building a terrainDecor is quite simple. I'm still torn on caps TerrainDecor or terrainDecor, for our purposes either is fine but for json's the above is the current use. Now, how do we do it?
+Building a `terrainDecor` is actually quite simple. I'm still torn on caps `TerrainDecor` or `terrainDecor`, for our purposes either is fine but for json's the above is the current use. Now, how do we do it?
 
 The way we lay down the decor, with all other layers, is first we must decide what order to present. Normally, a Forest then Jungle results in a different sprite than Jungle then Forest. With Grassland as the base, we could:
 a. place the GrasslandXX water corner decor first, then Marsh, to represent marshy water in addition to marshy land.
 b. place Marsh first, then decor, resulting in marshy land, normal water. Stacking other terrainFeatures like Forest and Jungle, or Hill, anything, all get the same treatment.
+
+🧐 The decor math image further down makes this concept easier to understand.
 
 Because the decor here has an opaque area and mostly alpha clear area, when it's applied over most any tile, the water edge appears and land portion appears to recess - automagic. Using these for rivers was actually accidental.
 
@@ -110,14 +118,7 @@ The only modification to Coast is adding the unique label 'Coast'. What this doe
 
 Reference [image 4](https://raw.githubusercontent.com/hackedpassword/Unciv-Assets/refs/heads/main/Images/Ultima%20V/decor_demo/decor-demo_4.png) for context.
 
-### Background
-In my background, which goes back to [mapping for Quake 3](https://worldofpadman.net/en/tutorials/converting-brushwork-from-a-map-into-an-ase-map-object/), the [editor Gtk Radiant](https://worldofpadman.net/wp-content/uploads/woptut_map2asebrushwork-728x409.jpg) would reference [shader files](https://icculus.org/gtkradiant/documentation/Q3AShader_Manual/ch01/pg1_1.htm#what), and the mapper could specify `qer_editorimage [textures/[path/image.tga]]` to use a [different editor image to represent the shader texture](https://icculus.org/gtkradiant/documentation/Q3AShader_Manual/ch04/pg4_1.htm#edimg).
-
-![](https://worldofpadman.net/wp-content/uploads/woptut_map2asebrushwork-728x409.jpg)
-
-The editorimage was super-handy, especially when the final rendered texture was non-deterministic, due to shader manipulations via multi-texture layering (like we're doing here), blend operations, vertex manipulation, various emmissions, and plenty of [other fancy effects](https://icculus.org/gtkradiant/documentation/Q3AShader_Manual/ch05/pg5_1.htm#tcmod) (tcmod turb was especially fun).
-
-Setting up geometry usually involved "caulk", the pink stuff you see above. This acted as an invisible solid collision surface, used mostly when setting up structures for textures/shaders to be applied upon. The pink caulk would render as an invisible surface, still solid blocking weapons/movement. Ok I've stretched this out pretty far but that's because I've applied the same principles to River terrainDecor, more importantly, opened up a new venue of map dev tools for Unciv. This means we could for example split Forest into more layers for whatever reason, perhaps caulk a Forest editorimage, then later swap the editorimage for the game asset. That's a very simple example.
+The pink rivers are editor guide images. We swap images before playing the real game.
 
 ### The business end
 
@@ -169,17 +170,11 @@ update_rivers.bat:
 copy /Y *.png ..\..
 ```
 
-If I'm doing map dev, I run update_rivers from /dev, hit my shortcut that does an atlas regen, runs Unciv. When I want to see the in-game result, I do the same steps from /game. With keyboard shortcuts set up plus .bat file automation, moving between the two states are fast and painless.
-
-### Obligatory nostalgia
-
-omg I miss the q3 shader manual, haven't looked at this in yearsss. Used to surf through it daily as if my gaming bible. For real. I had a printed binder with plastic sheet protectors - other mappers and some devs found this an impressive step up in q3 map dev. Had a couple gamers from my clan over to my house, they treated the binder like an actual treasured artifact. Good times. Hmm.. if it weren't for Unciv continuously evolving it's a tempting idea to recreate.
-
-Shout out to [World of Padman](https://worldofpadman.net/) (where I found the Gtk editor images) ... this total conversion q3 mod still persists?? That's awesome!
+I can run update_rivers.bat from /dev, hit my shortcut that does an atlas regen, runs Unciv. When I want to see the in-game result, I do the same steps from /game. With keyboard shortcuts set up plus .bat file automation, moving between the two states are fast and painless.
 
 ## More decoration aspects
 
-Resources are the next challenge, they're not as drop-in as I'd like. In `TileResources.json` we add:
+Resources are the next challenge, they're not as drop-in as I'd like. In `TileResources.json` we recreate 'Fish' and add:
 ```
 	{
 		"name": "Fish",
@@ -192,6 +187,8 @@ Resources are the next challenge, they're not as drop-in as I'd like. In `TileRe
 ```
 
 We see here the addendum to where Fish can be found, because inheritence doesn't work on that attribute. However, the unique references 'Coast', which should work for map gen. Map placement for Fish won't work on Coast-edgeless unless that update is applied to Fish.
+
+🛠️ Still more work to do!
 
 ### Decor math
 
@@ -207,7 +204,7 @@ What's actually new here:
 - Intentionally tiling no-effect terrainFeatures
 - A new game aesthetic technique with immense potential
 
-Decorations on their own are not new. Haven't looked yet, maybe 5hex tileset leaned this way. It is a bit tedious to place layers meticulously. Overall, doable.
+Decorations on their own are not new. It is a bit tedious to place decor layers meticulously. Overall, doable, amazing result.
 
 Thanks for reading, if you wanted another visual effects ability, this technique should satisfy you and your fanbase! :D
 
