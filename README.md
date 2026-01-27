@@ -1,27 +1,32 @@
 # UltimaV retroset
 
-Tileset graphics mod for Ultima V series. A unicorn of Unciv graphics - square tile gameplay based on the OG RPG, Ultima V.
+Tileset graphics mod for Ultima V series. A unicorn of Unciv graphics - **square tile** gameplay, based on the OG RPG, Ultima V!
 
-Not _entirely_ complete yet - things like pillaged improvements and nuance tile conditions still fall back on built-in tilesets. Current progress is more than satisfactory to minimize distraction by the few remaining fallback non-Ultima sprites.
+The tileset is built specifically for the Brittania map. See installation below to match these up.
 
-Square tiles are cool, with edges even better. But one of the attractions to the original U5 was its sprite palette of angled terrain edges. Replicating this in Unciv is not trivial, though it seems to be possible as seen in the demo image.
+This mod is evolving from a tileset into a styled mod! There's a lot of potential to capture Ultima V gameplay in a Civ V world. Anticipated is the use of equipment, items, and spells, along with a re-envisioned Unciv battlefield experience to reflect Ultima V's adventurous and dangerous roaming about. Quests? Objectives? Absolutely. There's an idea of a winning condition that involves visiting shrines, cities of virtue, dungeons, codex, and other landmarks, to progress the narrative, while intersecting with other players also questing. Fight? Collaborate? Lots to consider while working to secure the next goal.
 
 # Updates
 
-New Unciv modding invention: Terrain decorations (decor)
+Made a per-tile representation mod of [drrak's map](https://drrak.github.io/ultima5/). Clever Lord British and company use both angled and curved grass-water edging all over to create natural visuals. When tiled, the simplicity is exposed:
 
-![](https://raw.githubusercontent.com/hackedpassword/Unciv-Assets/refs/heads/main/Images/Ultima%20V/Decor%20intro.png)
+![](https://raw.githubusercontent.com/hackedpassword/Unciv-Assets/refs/heads/main/Images/Ultima%20V/revealed_tiles.png)
 
-## What am I looking at?
+This is really cool to look at up close. River used between river-end aside various angled textures, brilliant. Some map areas are challenging to interpret to re-map into 1:4 hex->square, this helps guide that effort.
 
-Let's go step by step to appreciate the direction this is heading.
-- Number 1, everything you see above is all graphics modded, meaning vanilla unciv works (almost!) without any updates.
-- Second, you'll notice many square textures are now represented with fancy decors that make tetris-looking land into far more natural landscapes.
-- This is a basic land set just to show off what decor can do. Wow.
+[Full map is here](https://raw.githubusercontent.com/hackedpassword/Unciv-Assets/refs/heads/main/Images/Ultima%20V/resource/Ultima%20V%20-%20Overworld%204096%20-%20with%20overlay.png).
 
-Again, all the above is _absolutely legit hex grid usual gameplay_. The decor renders such that TF's are knocked out (per TF order laid down) allowing careful sprite alignments on the backend (building the decor sprites) to appear like a non-symmetrical shape. Various combinations create entirely new appearances, or extend others. It's so cool. I'm super impressed at how this is turning out.
+### Terrain decor update
 
-## Well that is cool but what about us hexgrid'rs?
+New Unciv modding invention: [Terrain decorations](https://github.com/hackedpassword/UltimaV-retroset/blob/main/docs/Decorations.md) that add a new dimension of mapping goodness!
+
+You'll notice square tiles have overlying fancy decor sprites that make tetris-looking land turn into far more natural landscapes. Much like how the original map was built, though here we build by layers versus single sprites.
+
+It may seem weird, but square tiles in a hex grid is _absolutely legit hex grid gameplay_. The decor renders such that TF's (terrainfeatures) are placed (per TF order laid down) allowing careful sprite alignments on the backend (building the decor sprites) to appear like a non-symmetrical shape. Various combinations create entirely new appearances, or extend others. It's so cool. I'm super impressed at how this is turning out.
+
+One futher SUPER SEKRAT attribute of this technique. Still need to update the [sprites here](https://github.com/hackedpassword/Unciv-Assets/tree/main/Mods/Ultima%20V%20retroset/Images/TileSets/HexaRealm/Tiles), there's tricks to putting a quad set of 16x16 with 2-4px outlier overlapping pixels. Hex tiles in their regular form are still square textures lol!
+
+## Well that is cool but what about decor for us hexgrid'rs?
 
 Been thinking about that (hey I am too!). Decors like the above don't have the tile alignments needed in random map gen to make sense - they'd be a muddled mess. I've already accepted awesome Unciv graphics are not a community selling point, that's fine, unfortunately I can't see how to integrate coherent decor into random gen, without some serious advancements. Personally I find random gen spammy in resources even at minimal settings, or a weird diffusion of terrain. Not complaining my pref. Hand-built has some real advantages like true biomes and route control. I love map-modding.
 
