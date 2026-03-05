@@ -169,6 +169,7 @@
 
 	// Paths //
 	// Forts and citadels don't place on path terrainfeatures atm while not a base mod, ignore til later
+	// Plains will be the base terrain, while looking Grassland.
 	"Plains+Path": ["Grassland","Path"],
 	"Plains+Path low": ["Grassland","Path low"],
 	"Plains+Path low west": ["Grassland","Path low west"],

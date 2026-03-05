@@ -1,0 +1,12 @@
+[
+
+	{
+		"name": "Fish",
+		"resourceType": "Bonus",
+		"terrainsCanBeFoundOn": ["Coast","Coast edgeless","Coast shore"],
+		"food": 1,
+		"improvement": "Fishing Boats",
+		"uniques": ["Generated on every [10] tiles <in [{Featureless} {Coast}] tiles>"]
+	},
+
+]
