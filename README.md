@@ -12,7 +12,18 @@ This mod is evolving from a tileset into a styled mod! There's a lot of potentia
 
 # Updates
 
+## Blended decor
+
+This is a first look at both beach and shore (grassland and coast) decors, plus rivers, several other quality updates, blended with terrainfeatures into one fantastic screenie:
+
+![](https://raw.githubusercontent.com/hackedpassword/Unciv-Assets/refs/heads/main/Images/Ultima%20V/blended_decor.png)
+
+Updating the repo here to reflect. Most actual update go to -tileset as I build and test, not this one! 🤩
+
+The shapes are freeform in this prototype. Later in map dev I'll build much closer to the original map spec. Cleaned up decor names since the last set was getting kinda wild.
+
 ## Decor alignment tech
+
 Splitting dev work between gfx and base. On the graphics side, a particularly ugly issue has been plaguing decor sprites - alignments. Cause: render space per `32x32` sprite is actually `24x28` for almost seamless tiling. Ouch, not a proper divisor, compensated. First batch of rebuilt TF's show how immensely powerful only a 4-pack of `terrainDecor` can be. The open island below is 2 tiles thick, symmetrical.
 
 ![](https://raw.githubusercontent.com/hackedpassword/Unciv-Assets/refs/heads/main/Images/Ultima%20V/Decor_size_correction_demo.png)
@@ -51,9 +62,9 @@ Decors like the above don't have the auto tile alignments needed in random map g
 
 Unfortunately I can't see how to integrate coherent auto gen decor into random gen, without some serious advancements. Personally I find random gen spammy anyway (in resources) even at minimal settings, or a weird diffusion of terrain (biomes could use an overhaul). Not complaining, my pref. Hand-built has some real advantages like true biomes and route control. I love map-modding! Look at the biomes of Britannia, current Unciv map gen can't touch that level of environmental/world design. Would be an interesting side project to try volumetric biome gen. Likely would use two stages - 1st stage map gen lays down env frame tiles, then 2nd stage uses 'this tile becomes' unique to transform the framework tiles at game start into blossomed biome areas.
 
-### PSA, 🍺🥴🤕🤔😁🍺
+# PSA 🍺🥴🤕🤔😁🍻😵🥳
 
-Nobody follows my tech lol (it's too advanced) so pretty much just noting for myself. Is there anyone out there that can modhack Unciv's potential like I do? Who are the mad modders? :P First mad modders that come to mind are @carriontrooper and @AutumnPizazz for their highly creative mods that push Unciv. I must be shortsighted, but I'm also not on discord atm while r/l pressures/stresses detract from immediate community involvement, so who's doing what currently? Dunno, I'm killin it though that's what matters.
+Unciv released v4.19.16 - with a signifcant change, quadruple memory limits. What does this mean? It matters here because a 128^2 map is heavy-duty. Very interesting.
 
 # Features
 
